@@ -41,5 +41,12 @@ const { project } = Astro.props;
 				</a>
 			)
 		}
+		{
+			project.recognitionUrl && (
+				<a href={project.recognitionUrl} target="_blank" rel="noreferrer">
+					{project.recognitionLabel ?? 'Recognition'}
+				</a>
+			)
+		}
 	</div>
 </article>

@@ -12,6 +12,8 @@ export type Project = {
 	stack: string[];
 	repoUrl: string;
 	liveUrl?: string;
+	recognitionUrl?: string;
+	recognitionLabel?: string;
 	image?: string;
 	featured: boolean;
 	category: string;
@@ -74,13 +76,15 @@ export const projects: Project[] = [
 		problem:
 			'New farmers need support across crop planning, local knowledge, and day-to-day operating decisions without juggling separate tools.',
 		solution:
-			'Built a desktop-first Next.js application that brings map-based planning, analytics, knowledge access, and AI chat into one workflow.',
+			'Built a desktop-first Next.js application that brings map-based planning, analytics, knowledge access, and AI chat into one workflow, and the project was later featured by ETSUZAN as one of its selected teams.',
 		stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'OpenAI', 'Google Maps'],
 		repoUrl: 'https://github.com/plypieng/rouvis-web',
 		liveUrl: 'https://rouvis-prototype.vercel.app',
+		recognitionUrl: 'https://etsuzan.org/posts/ROUVIS',
+		recognitionLabel: 'ETSUZAN feature',
 		featured: true,
 		category: 'Vertical AI product',
-		status: 'Deployed prototype',
+		status: 'Deployed prototype / ETSUZAN selected',
 	},
 	{
 		slug: 'nut-denki',
