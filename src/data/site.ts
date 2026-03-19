@@ -37,31 +37,31 @@ export type ContactLink = {
 
 export const profile = {
 	name: 'Nantaphon Chimpalee',
-	title: 'Embedded Systems and Vertical AI Engineer',
-	location: 'Japan',
-	bio: 'Thai engineer based in Japan, working across automotive hardware architecture, manufacturing AI systems, and product prototypes that need to hold up under real constraints.',
-	company: 'Bosch Japan / Nagaoka University of Technology',
+	title: 'Electrical Engineering Student and Ex-Industrial IoT Engineer',
+	location: 'Kisarazu, Chiba, Japan',
+	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology.',
+	company: 'Nagaoka University of Technology',
 	email: 'plysd4@hotmail.com',
 	github: 'https://github.com/plypieng',
 	linkedin: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
 	headline:
-		'I build systems where sensors, software, and applied AI have to survive contact with the real world.',
+		'I work at the intersection of embedded hardware, industrial sensing, and applied AI/ML.',
 	intro:
-		'My background spans factory-floor AIoT, embedded sensing, full-stack product prototypes, and technical simulations. I focus on joining low-level constraints to useful software behavior.',
+		'My background spans factory-floor AIoT, embedded sensing, automotive hardware exposure, full-stack product prototypes, and technical simulations. I focus on turning real-world constraints into useful software behavior.',
 };
 
 export const stats = [
 	{
-		label: 'Manufacturing AIoT',
+		label: 'Industry experience',
 		value: '3 years',
 	},
 	{
-		label: 'Languages',
-		value: 'JP / EN / TH',
+		label: 'Current track',
+		value: 'B.Eng. at NUT',
 	},
 	{
-		label: 'External funding',
-		value: 'JPY 2M+',
+		label: 'Top skills',
+		value: 'AI / Embedded',
 	},
 ];
 
@@ -152,14 +152,14 @@ export const focusAreas: FocusArea[] = [
 			'I work on AI features that respect latency, memory, sensing, and deployment constraints instead of assuming infinite compute.',
 	},
 	{
-		title: 'Manufacturing and industrial software',
+		title: 'Industrial sensing and AIoT',
 		description:
-			'I have built tooling for process data collection, quality analysis, and operator-facing workflows in production-style environments.',
+			'I have built sensor-integrated tooling and analysis workflows for production environments where instrumentation and reliability matter.',
 	},
 	{
-		title: 'Full-stack technical products',
+		title: 'Systems design across domains',
 		description:
-			'I prototype user-facing systems end-to-end when a domain problem needs product thinking as much as model quality.',
+			'I move between hardware context, data pipelines, and user-facing software when the problem cannot be solved cleanly from one layer alone.',
 	},
 	{
 		title: 'Interactive simulation and visualization',
@@ -170,10 +170,28 @@ export const focusAreas: FocusArea[] = [
 
 export const timeline: TimelineItem[] = [
 	{
+		label: 'HW Architect Intern at Bosch Japan',
+		detail:
+			'Worked on automotive E/E architecture and ADAS hardware platform customer-interface work in a hybrid internship setting.',
+		dateRange: 'Aug 2025 to Sep 2025',
+	},
+	{
+		label: 'AI Engineer Intern at OPTiM',
+		detail:
+			'Implemented Fusion RAG system work for the agentic AI chat product OPTiM AIRES.',
+		dateRange: 'Jul 2025 to Aug 2025',
+	},
+	{
 		label: 'AIoT Engineer in Japanese manufacturing',
 		detail:
 			'Built sensor data pipelines, quality analytics, and machine-learning workflows for production environments.',
-		dateRange: '2022 to 2025',
+		dateRange: 'May 2023 to Apr 2025',
+	},
+	{
+		label: 'Process Development Engineer at Kuroda Precision',
+		detail:
+			'Worked on electric-vehicle motor-core manufacturing process development before moving into industrial IoT engineering.',
+		dateRange: 'Apr 2022 to Apr 2023',
 	},
 	{
 		label: 'Freelance manufacturing AI developer',
@@ -182,15 +200,9 @@ export const timeline: TimelineItem[] = [
 		dateRange: '2025 to present',
 	},
 	{
-		label: 'AI Engineer intern and HW architecture intern',
-		detail:
-			'Worked on Fusion RAG implementation and later supported automotive hardware platform planning in a global engineering setting.',
-		dateRange: '2025',
-	},
-	{
 		label: 'B.Eng. candidate at Nagaoka University of Technology',
 		detail:
-			'Currently studying electrical, electronics, and information engineering while extending research and independent product work.',
+			'Currently studying electrical, electronics, and information engineering in a coding theory and data-sequence lab while extending research and independent product work.',
 		dateRange: '2025 to 2027',
 	},
 ];
