@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F2ECE2"/>
+  <rect x="34" y="34" width="1132" height="562" rx="34" fill="#FCFAF6" stroke="#D1C4B1"/>
+  <path d="M76 94H1124" stroke="#0D627A" stroke-opacity="0.22"/>
+  <path d="M76 136H1124" stroke="#0D627A" stroke-opacity="0.12"/>
+  <circle cx="992" cy="154" r="94" fill="#0D627A" fill-opacity="0.12"/>
+  <circle cx="1084" cy="486" r="126" fill="#BF6F3F" fill-opacity="0.12"/>
+  <rect x="84" y="176" width="188" height="28" rx="14" fill="#0D627A" fill-opacity="0.12"/>
+  <text x="84" y="258" fill="#14202A" font-family="Arial, sans-serif" font-size="84" font-weight="700">Plypieng</text>
+  <text x="84" y="324" fill="#14202A" font-family="Arial, sans-serif" font-size="40" font-weight="700">Embedded Systems and Vertical AI Engineer</text>
+  <text x="84" y="394" fill="#51606D" font-family="Arial, sans-serif" font-size="30">
+    <tspan x="84" dy="0">Hardware-aware AI, industrial software, embedded sensing,</tspan>
+    <tspan x="84" dy="42">and interactive technical prototypes.</tspan>
+  </text>
+  <rect x="84" y="458" width="350" height="54" rx="27" fill="#14202A"/>
+  <text x="118" y="493" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="24" font-weight="700">github.com/plypieng</text>
+</svg>

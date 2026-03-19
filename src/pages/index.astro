@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import {
+	contactLinks,
+	copy,
+	focusAreas,
+	profile,
+	projects,
+	stats,
+	timeline,
+} from '../data/site';
+
+const featuredProjects = projects.filter((project) => project.featured);
+---
+
+<BaseLayout title={copy.pageTitle} description={copy.pageDescription}>
+	<div class="page-shell">
+		<header class="topbar">
+			<p class="topbar__brand">plypieng / github pages</p>
+			<nav aria-label="Section navigation">
+				<a href="#about">About</a>
+				<a href="#projects">Work</a>
+				<a href="#focus">Focus</a>
+				<a href="#timeline">Trajectory</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="hero__copy reveal">
+				<p class="hero__label">
+					<span>{copy.heroLabel.en}</span>
+					<span class="section-heading__label-ja">{copy.heroLabel.ja}</span>
+				</p>
+				<h1>{profile.title}</h1>
+				<p class="hero__headline">{profile.headline}</p>
+				<p class="hero__intro">{profile.intro}</p>
+				<div class="hero__actions">
+					<a class="button button--primary" href="#projects">See selected work</a>
+					<a class="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">
+						GitHub profile
+					</a>
+				</div>
+				<ul class="hero__tags" aria-label="Primary strengths">
+					<li>Embedded systems</li>
+					<li>Industrial AI</li>
+					<li>Full-stack prototypes</li>
+					<li>Simulation workflows</li>
+				</ul>
+				<div class="hero__stats" aria-label="Highlights">
+					{
+						stats.map((stat) => (
+							<div class="stat-card">
+								<span class="stat-card__label">{stat.label}</span>
+								<span class="stat-card__value">{stat.value}</span>
+							</div>
+						))
+					}
+				</div>
+			</div>
+
+			<aside class="hero__aside reveal">
+				<div class="portrait">
+					<img
+						src="/images/profile.jpg"
+						alt="Portrait of Nantaphon Chimpalee"
+						width="1280"
+						height="1269"
+						loading="eager"
+					/>
+				</div>
+				<ul class="quick-facts">
+					<li>
+						<span>Name</span>
+						<span>{profile.name}</span>
+					</li>
+					<li>
+						<span>Base</span>
+						<span>{profile.location}</span>
+					</li>
+					<li>
+						<span>Current context</span>
+						<span>{profile.company}</span>
+					</li>
+					<li>
+						<span>Contact</span>
+						<span>{profile.email}</span>
+					</li>
+				</ul>
+			</aside>
+		</section>
+
+		<div class="section-grid">
+			<section class="section-card about-panel reveal" id="about">
+				<SectionHeading
+					label={copy.aboutLabel}
+					intro="Engineer bridging hardware constraints, industrial data, and product-oriented AI systems."
+				/>
+				<div class="about-copy">
+					<p>{profile.bio}</p>
+					<p>
+						I started in Japanese manufacturing, building data collection and quality-analysis systems that
+						had to work with real sensors, real operators, and real production limits. Since then I have
+						continued moving across embedded systems, applied AI, and technical product design.
+					</p>
+					<p>
+						My recent work spans automotive hardware architecture exposure, manufacturing AI consulting,
+						full-stack product experiments like Rouvis, and interactive simulation projects that make complex
+						technical ideas easier to test and explain.
+					</p>
+				</div>
+				<ul class="hero__tags" aria-label="Detailed skills">
+					<li>Python</li>
+					<li>C / C++</li>
+					<li>TypeScript</li>
+					<li>ESP32 / Spresense</li>
+					<li>RAG / LLM systems</li>
+					<li>Japanese N1</li>
+				</ul>
+			</section>
+
+			<section class="section-card focus-panel reveal" id="focus">
+				<SectionHeading
+					label={copy.focusLabel}
+					intro="The overlap I care about is where physical systems, data, and software all affect each other."
+				/>
+				<div class="focus-list">
+					{
+						focusAreas.map((area) => (
+							<article class="focus-card reveal">
+								<p class="focus-card__eyebrow">Area</p>
+								<h3>{area.title}</h3>
+								<p>{area.description}</p>
+							</article>
+						))
+					}
+				</div>
+			</section>
+
+			<section class="section-card projects-panel" id="projects">
+				<SectionHeading
+					label={copy.projectsLabel}
+					intro="A curated shortlist of public work that best represents how I think and build."
+				/>
+				<div class="projects-grid">
+					{
+						featuredProjects.map((project) => (
+							<ProjectCard project={project} />
+						))
+					}
+				</div>
+			</section>
+
+			<section class="section-card timeline-panel" id="timeline">
+				<SectionHeading
+					label={copy.timelineLabel}
+					intro="The through-line is consistent: build useful systems at the boundary between constraints and capability."
+				/>
+				<div class="timeline-grid">
+					{
+						timeline.map((item) => (
+							<article class="timeline-card reveal">
+								<p class="timeline-card__date">{item.dateRange}</p>
+								<h3>{item.label}</h3>
+								<p>{item.detail}</p>
+							</article>
+						))
+					}
+				</div>
+			</section>
+
+			<section class="section-card contact-panel reveal" id="contact">
+				<SectionHeading
+					label={copy.contactLabel}
+					intro="If you are hiring or building in embedded AI, industrial software, or technically demanding product environments, I am easy to reach."
+				/>
+				<p class="contact-panel__summary">
+					I prefer concise technical conversations with clear problem statements. GitHub is the best place to
+					see public work; email is best for collaboration, hiring, or project discussions.
+				</p>
+				<div class="contact-links">
+					{
+						contactLinks.map((link) => (
+							<article class="contact-link">
+								<a
+									href={link.href}
+									target={link.href.startsWith('http') ? '_blank' : undefined}
+									rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+								>
+									{link.label}
+								</a>
+								<p>{link.note}</p>
+							</article>
+						))
+					}
+				</div>
+				<p class="footer-note">
+					Site built with Astro and deployed via GitHub Pages. English-first, with selective Japanese labels
+					where they add context.
+				</p>
+			</section>
+		</div>
+	</div>
+</BaseLayout>
