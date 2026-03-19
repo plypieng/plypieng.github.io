@@ -37,17 +37,17 @@ export type ContactLink = {
 
 export const profile = {
 	name: 'Nantaphon Chimpalee',
-	title: 'ADAS and Edge AI-Oriented Engineer',
+	title: 'Embedded Systems and Applied AI Engineer',
 	location: 'Kisarazu, Chiba, Japan',
-	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology while steering toward ADAS perception, edge AI, and autonomy-oriented systems work.',
+	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology.',
 	company: 'Nagaoka University of Technology',
 	email: 'plysd4@hotmail.com',
 	github: 'https://github.com/plypieng',
 	linkedin: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
 	headline:
-		'I am moving toward ADAS perception and edge AI by building across embedded hardware, industrial sensing, and applied AI/ML.',
+		'I build across embedded hardware, industrial sensing, simulation, and applied AI/ML.',
 	intro:
-		'My background spans factory-floor AIoT, embedded sensing, automotive hardware exposure, full-stack product prototypes, and technical simulations. I am now shaping that experience toward perception systems, hardware-aware AI deployment, and autonomy-adjacent engineering.',
+		'My background spans factory-floor AIoT, embedded sensing, full-stack product prototypes, and technical simulations. I focus on turning real-world constraints into useful software behavior.',
 };
 
 export const stats = [
@@ -56,8 +56,8 @@ export const stats = [
 		value: '3 years',
 	},
 	{
-		label: 'Direction',
-		value: 'ADAS / Edge AI',
+		label: 'Current work',
+		value: 'Embedded / AI',
 	},
 	{
 		label: 'Current track',
@@ -147,11 +147,6 @@ export const projects: Project[] = [
 
 export const focusAreas: FocusArea[] = [
 	{
-		title: 'ADAS perception and edge AI',
-		description:
-			'I am intentionally moving toward perception pipelines, deployable AI on constrained compute, and the interface between vehicle platforms and modern ML systems.',
-	},
-	{
 		title: 'Hardware-aware AI systems',
 		description:
 			'I work on AI features that respect latency, memory, sensing, and deployment constraints instead of assuming infinite compute.',
@@ -174,12 +169,6 @@ export const focusAreas: FocusArea[] = [
 ];
 
 export const timeline: TimelineItem[] = [
-	{
-		label: 'Current direction: ADAS perception and autonomy systems',
-		detail:
-			'Using my background in embedded sensing, industrial AI, and automotive hardware exposure to pivot toward perception, edge AI, and software-defined mobility systems.',
-		dateRange: '2026 onward',
-	},
 	{
 		label: 'HW Architect Intern at Bosch Japan',
 		detail:
@@ -213,7 +202,7 @@ export const timeline: TimelineItem[] = [
 	{
 		label: 'B.Eng. candidate at Nagaoka University of Technology',
 		detail:
-			'Currently studying electrical, electronics, and information engineering in a coding theory and data-sequence lab while extending research and independent product work with a stronger focus on deployable AI systems.',
+			'Currently studying electrical, electronics, and information engineering in a coding theory and data-sequence lab while extending research and independent product work.',
 		dateRange: '2025 to 2027',
 	},
 ];
