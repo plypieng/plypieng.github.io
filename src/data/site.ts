@@ -38,7 +38,7 @@ export type ContactLink = {
 export const profile = {
 	name: 'Nantaphon Chimpalee',
 	title: 'Embedded Systems and Applied AI Engineer',
-	location: 'Kisarazu, Chiba, Japan',
+	location: 'Nagaoka, Niigata, Japan',
 	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology.',
 	company: 'Nagaoka University of Technology',
 	email: 'plysd4@hotmail.com',
