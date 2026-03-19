@@ -129,6 +129,21 @@ export const projects: Project[] = [
 		status: 'Embedded prototype',
 	},
 	{
+		slug: 'interactive-torque-project',
+		name: 'Interactive Torque Project',
+		summary:
+			'Torque measurement visualization and analysis tool for industrial inspection data and pass/fail evaluation.',
+		problem:
+			'In-house torque measurement data needed faster comparison, feature extraction, and evaluation without manually checking raw CSV files.',
+		solution:
+			'Built a Python application that visualizes normal, filtered, and FFT views, applies threshold-based checks, and generates downloadable analysis outputs.',
+		stack: ['Python', 'Dash', 'Signal processing', 'CSV analysis', 'PDF reporting'],
+		repoUrl: 'https://github.com/plypieng/InteractiveTorqueProject',
+		featured: true,
+		category: 'Industrial tooling',
+		status: 'Analysis application',
+	},
+	{
 		slug: 'built-a-boat-to-kill-mf',
 		name: 'Built a Boat',
 		summary:
