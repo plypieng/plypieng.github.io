@@ -43,6 +43,7 @@ export const profile = {
 	company: 'Bosch Japan / Nagaoka University of Technology',
 	email: 'plysd4@hotmail.com',
 	github: 'https://github.com/plypieng',
+	linkedin: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
 	headline:
 		'I build systems where sensors, software, and applied AI have to survive contact with the real world.',
 	intro:
@@ -199,6 +200,11 @@ export const contactLinks: ContactLink[] = [
 		label: 'GitHub',
 		href: 'https://github.com/plypieng',
 		note: 'Public repositories and recent work',
+	},
+	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
+		note: 'Professional profile and career history',
 	},
 	{
 		label: 'Email',
