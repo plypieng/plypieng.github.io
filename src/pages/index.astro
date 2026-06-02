@@ -1,208 +1,172 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import {
-	contactLinks,
-	copy,
-	focusAreas,
-	profile,
-	projects,
-	stats,
-	timeline,
-} from '../data/site';
+import { contactLinks, copy, focusAreas, profile, projects, timeline } from '../data/site';
 
-const featuredProjects = projects.filter((project) => project.featured);
+const projectOrder = [
+	'rouvis-web',
+	'interactive-torque-project',
+	'ceramic-fracture-lab',
+	'firebase-esp32-ctmonitor',
+	'nut-denki',
+];
+const featuredProjects = projectOrder
+	.map((slug) => projects.find((project) => project.slug === slug))
+	.filter((project): project is (typeof projects)[number] => project !== undefined);
+const visibleContactLinks = contactLinks.filter((link) => link.label !== 'Company context');
+const primaryLinks = [
+	{ label: 'GitHub', href: profile.github },
+	{ label: 'LinkedIn', href: profile.linkedin },
+	{ label: 'Email', href: `mailto:${profile.email}` },
+];
 ---
 
 <BaseLayout title={copy.pageTitle} description={copy.pageDescription}>
-	<div class="page-shell">
-		<header class="topbar">
-			<p class="topbar__brand">Nantaphon Chimpalee</p>
-			<nav aria-label="Section navigation">
-				<a href="#about">About</a>
-				<a href="#focus">Research</a>
-				<a href="#projects">Projects</a>
-				<a href="#timeline">Experience</a>
-				<a href="#contact">Contact</a>
-			</nav>
-		</header>
-
-		<section class="hero">
-			<div class="hero__copy reveal">
-				<p class="hero__label">
-					<span>{copy.heroLabel.en}</span>
-					<span class="section-heading__label-ja">{copy.heroLabel.ja}</span>
-				</p>
-				<h1>{profile.title}</h1>
-				<p class="hero__headline">{profile.headline}</p>
-				<p class="hero__intro">{profile.intro}</p>
-				<div class="hero__actions">
-					<a class="button button--primary" href="#projects">See selected work</a>
-					<a class="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">
-						GitHub
-					</a>
-					<a class="button button--secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
-						LinkedIn
-					</a>
-				</div>
-				<ul class="hero__tags" aria-label="Primary strengths">
-					<li>Applied AI</li>
-					<li>Embedded systems</li>
-					<li>Industrial sensing</li>
-					<li>Simulation</li>
-				</ul>
-				<div class="hero__stats" aria-label="Highlights">
-					{
-						stats.map((stat) => (
-							<div class="stat-card">
-								<span class="stat-card__label">{stat.label}</span>
-								<span class="stat-card__value">{stat.value}</span>
-							</div>
-						))
-					}
-				</div>
-			</div>
-
-			<aside class="hero__aside reveal">
-				<div class="portrait">
-					<img
-						src="/images/profile.jpg"
-						alt="Portrait of Nantaphon Chimpalee"
-						width="1280"
-						height="1269"
-						loading="eager"
-					/>
-				</div>
-				<ul class="quick-facts">
-					<li>
-						<span>Name</span>
-						<span>{profile.name}</span>
-					</li>
-					<li>
-						<span>Base</span>
-						<span>{profile.location}</span>
-					</li>
-					<li>
-						<span>Current context</span>
-						<span>{profile.company}</span>
-					</li>
-					<li>
-						<span>Contact</span>
-						<span>{profile.email}</span>
-					</li>
-				</ul>
-			</aside>
-		</section>
-
-		<div class="section-grid">
-			<section class="section-card about-panel reveal" id="about">
-				<SectionHeading
-					label={copy.aboutLabel}
-					intro="Research-oriented engineer working between machine learning, embedded systems, and practical deployment contexts."
+	<main class="container">
+		<header class="profile-header">
+			<a class="profile-photo" href="/" aria-label="Homepage">
+				<img
+					src="/images/profile.jpg"
+					alt="Portrait of Nantaphon Chimpalee"
+					width="1280"
+					height="1269"
+					loading="eager"
 				/>
-				<div class="about-copy">
-					<p>{profile.bio}</p>
-					<p>
-						I started in Japanese manufacturing, building data collection and quality-analysis systems around
-						real sensors, operators, and production constraints. That experience shapes how I evaluate AI:
-						useful models need good data, clear interfaces, and realistic assumptions about deployment.
-					</p>
-					<p>
-						My recent work includes AI product prototypes, manufacturing data-analysis tools, automotive
-						hardware architecture exposure, and simulation projects for technical experimentation.
-					</p>
-				</div>
-				<ul class="hero__tags" aria-label="Detailed skills">
-					<li>Python</li>
-					<li>C / C++</li>
-					<li>TypeScript</li>
-					<li>ESP32 / Spresense</li>
-					<li>RAG / LLM systems</li>
-					<li>Japanese N1</li>
-				</ul>
-			</section>
+			</a>
 
-			<section class="section-card focus-panel reveal" id="focus">
-				<SectionHeading
-					label={copy.focusLabel}
-					intro="I am interested in AI that survives contact with physical systems, incomplete data, and real users."
-				/>
-				<div class="focus-list">
+			<div class="profile-summary">
+				<h1>{profile.name}</h1>
+				<p>{profile.title}</p>
+				<p>{profile.company}</p>
+				<p>{profile.location}</p>
+				<p>
 					{
-						focusAreas.map((area) => (
-							<article class="focus-card reveal">
-								<p class="focus-card__eyebrow">Area</p>
-								<h3>{area.title}</h3>
-								<p>{area.description}</p>
-							</article>
-						))
-					}
-				</div>
-			</section>
-
-			<section class="section-card projects-panel" id="projects">
-				<SectionHeading
-					label={copy.projectsLabel}
-					intro="Selected public projects that show my work across applied AI, sensing, simulation, and technical products."
-				/>
-				<div class="projects-grid">
-					{
-						featuredProjects.map((project) => (
-							<ProjectCard project={project} />
-						))
-					}
-				</div>
-			</section>
-
-			<section class="section-card timeline-panel" id="timeline">
-				<SectionHeading
-					label={copy.timelineLabel}
-					intro="A concise timeline of education, industry work, internships, and independent engineering projects."
-				/>
-				<div class="timeline-grid">
-					{
-						timeline.map((item) => (
-							<article class="timeline-card reveal">
-								<p class="timeline-card__date">{item.dateRange}</p>
-								<h3>{item.label}</h3>
-								<p>{item.detail}</p>
-							</article>
-						))
-					}
-				</div>
-			</section>
-
-			<section class="section-card contact-panel reveal" id="contact">
-				<SectionHeading
-					label={copy.contactLabel}
-					intro="For research, internship, engineering, or collaboration inquiries, email is the best contact path."
-				/>
-				<p class="contact-panel__summary">
-					GitHub is the best place to review public work. LinkedIn has career history and context. Email is
-					best for direct conversations.
-				</p>
-				<div class="contact-links">
-					{
-						contactLinks.map((link) => (
-							<article class="contact-link">
-								<a
-									href={link.href}
-									target={link.href.startsWith('http') ? '_blank' : undefined}
-									rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-								>
+						primaryLinks.map((link, index) => (
+							<>
+								<a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
 									{link.label}
 								</a>
-								<p>{link.note}</p>
-							</article>
+								{index < primaryLinks.length - 1 && <span> / </span>}
+							</>
 						))
 					}
-				</div>
-				<p class="footer-note">
-					Site built with Astro and deployed via GitHub Pages. English-first, with selective Japanese labels
-					where they add context.
 				</p>
-			</section>
-		</div>
-	</div>
+			</div>
+		</header>
+
+		<nav class="site-nav" aria-label="Page sections">
+			<a href="#bio">Bio</a>
+			<a href="#research">Research Interests</a>
+			<a href="#work">Selected Work</a>
+			<a href="#experience">Experience</a>
+			<a href="#contact">Contact</a>
+		</nav>
+
+		<section class="docs-section" id="bio">
+			<h2>Bio</h2>
+			<p>
+				I am an applied AI and embedded systems engineer based at Nagaoka University of Technology.
+				My work connects <strong>machine learning</strong>, <strong>industrial sensing</strong>,
+				<strong>embedded systems</strong>, and <strong>software prototypes</strong>.
+			</p>
+			<p>
+				Before university, I worked in Japanese manufacturing, where I built data collection,
+				quality-analysis, and AIoT workflows around real sensors and production constraints. That
+				background shapes my current interest in AI systems that are practical, inspectable, and useful
+				outside controlled demos.
+			</p>
+			<p>
+				My recent projects include vertical AI product work, manufacturing data-analysis tools,
+				automotive hardware architecture exposure, and simulation prototypes for technical
+				experimentation.
+			</p>
+		</section>
+
+		<section class="docs-section" id="research">
+			<h2>Research Interests</h2>
+			<ul class="plain-list">
+				{
+					focusAreas.map((area) => (
+						<li>
+							<strong>{area.title}.</strong> {area.description}
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="docs-section" id="work">
+			<h2>Selected Work</h2>
+			{
+				featuredProjects.map((project) => (
+					<article class="work-entry">
+						<p class="work-title">
+							<strong>{project.name}</strong>
+							<span> {project.category}</span>
+						</p>
+						<p>{project.summary}</p>
+						<p>
+							<em>{project.status}</em>
+						</p>
+						<p class="work-links">
+							<a href={project.repoUrl} target="_blank" rel="noreferrer">Code</a>
+							{project.liveUrl && (
+								<>
+									<span> / </span>
+									<a href={project.liveUrl} target="_blank" rel="noreferrer">Demo</a>
+								</>
+							)}
+							{project.recognitionUrl && (
+								<>
+									<span> / </span>
+									<a href={project.recognitionUrl} target="_blank" rel="noreferrer">
+										{project.recognitionLabel ?? 'Recognition'}
+									</a>
+								</>
+							)}
+						</p>
+					</article>
+				))
+			}
+		</section>
+
+		<section class="docs-section" id="experience">
+			<h2>Experience</h2>
+			<ul class="timeline-list">
+				{
+					timeline.map((item) => (
+						<li>
+							<div class="timeline-time">{item.dateRange}</div>
+							<div>
+								<p><strong>{item.label}</strong></p>
+								<p>{item.detail}</p>
+							</div>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section class="docs-section" id="contact">
+			<h2>Contact</h2>
+			<p>
+				For research, internship, engineering, or collaboration inquiries, email is the best contact path.
+			</p>
+			<ul class="contact-list">
+				{
+					visibleContactLinks.map((link) => (
+						<li>
+							<a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
+								{link.label}
+							</a>
+							<span> - {link.note}</span>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<footer class="footer">
+			<p>{profile.name} / {profile.email}</p>
+		</footer>
+	</main>
 </BaseLayout>
