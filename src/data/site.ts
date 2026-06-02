@@ -39,7 +39,7 @@ export type ContactLink = {
 
 export const profile = {
 	name: 'Nantaphon Chimpalee',
-	title: 'Embedded Systems and Applied AI Engineer',
+	title: 'Applied AI Research Engineer',
 	location: 'Nagaoka, Niigata, Japan',
 	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology.',
 	company: 'Nagaoka University of Technology',
@@ -47,23 +47,23 @@ export const profile = {
 	github: 'https://github.com/plypieng',
 	linkedin: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
 	headline:
-		'I build across embedded hardware, industrial sensing, simulation, and applied AI/ML.',
+		'I build practical AI systems at the intersection of sensing, software, and real-world constraints.',
 	intro:
-		'My background spans factory-floor AIoT, embedded sensing, full-stack product prototypes, and technical simulations. I focus on turning real-world constraints into useful software behavior.',
+		'My work connects embedded systems, industrial data, simulation, and machine learning into usable prototypes and research-oriented engineering tools.',
 };
 
 export const stats = [
 	{
-		label: 'Industry experience',
+		label: 'Industry',
 		value: '3 years',
 	},
 	{
-		label: 'Current work',
-		value: 'Embedded / AI',
+		label: 'Research focus',
+		value: 'Applied AI',
 	},
 	{
-		label: 'Current track',
-		value: 'B.Eng. at NUT',
+		label: 'Base',
+		value: 'Nagaoka',
 	},
 ];
 
@@ -166,24 +166,24 @@ export const projects: Project[] = [
 
 export const focusAreas: FocusArea[] = [
 	{
-		title: 'Hardware-aware AI systems',
+		title: 'Applied AI systems',
 		description:
-			'I work on AI features that respect latency, memory, sensing, and deployment constraints instead of assuming infinite compute.',
+			'I am interested in AI systems that move beyond demos and account for data quality, deployment constraints, and user workflows.',
 	},
 	{
-		title: 'Industrial sensing and AIoT',
+		title: 'Sensing and AIoT',
 		description:
-			'I have built sensor-integrated tooling and analysis workflows for production environments where instrumentation and reliability matter.',
+			'I have worked with sensor-integrated tooling, production data, and analysis workflows in manufacturing environments.',
 	},
 	{
-		title: 'Systems design across domains',
+		title: 'Research prototypes',
 		description:
-			'I move between hardware context, data pipelines, and user-facing software when the problem cannot be solved cleanly from one layer alone.',
+			'I build small but complete systems to test ideas across machine learning, web software, embedded devices, and simulation.',
 	},
 	{
-		title: 'Interactive simulation and visualization',
+		title: 'Simulation and visualization',
 		description:
-			'I use simulations and real-time environments to make technical systems easier to test, explain, and iterate on.',
+			'I use interactive tools and visualization to make technical behavior easier to inspect, explain, and improve.',
 	},
 ];
 
@@ -250,12 +250,12 @@ export const contactLinks: ContactLink[] = [
 ];
 
 export const copy = {
-	pageTitle: 'Plypieng Portfolio',
+	pageTitle: 'Nantaphon Chimpalee | Applied AI Research Engineer',
 	pageDescription:
-		'Portfolio homepage for Nantaphon Chimpalee, showcasing hardware-aware AI, embedded systems, industrial software, and interactive prototypes.',
+		'Research-oriented homepage for Nantaphon Chimpalee, focused on applied AI, embedded systems, industrial sensing, and simulation prototypes.',
 	heroLabel: {
-		en: 'Portfolio',
-		ja: 'ポートフォリオ',
+		en: 'Research Profile',
+		ja: '研究プロフィール',
 	},
 	aboutLabel: {
 		en: 'About',

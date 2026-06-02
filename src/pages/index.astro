@@ -18,12 +18,12 @@ const featuredProjects = projects.filter((project) => project.featured);
 <BaseLayout title={copy.pageTitle} description={copy.pageDescription}>
 	<div class="page-shell">
 		<header class="topbar">
-			<p class="topbar__brand">plypieng / github pages</p>
+			<p class="topbar__brand">Nantaphon Chimpalee</p>
 			<nav aria-label="Section navigation">
 				<a href="#about">About</a>
-				<a href="#projects">Work</a>
-				<a href="#focus">Focus</a>
-				<a href="#timeline">Trajectory</a>
+				<a href="#focus">Research</a>
+				<a href="#projects">Projects</a>
+				<a href="#timeline">Experience</a>
 				<a href="#contact">Contact</a>
 			</nav>
 		</header>
@@ -40,17 +40,17 @@ const featuredProjects = projects.filter((project) => project.featured);
 				<div class="hero__actions">
 					<a class="button button--primary" href="#projects">See selected work</a>
 					<a class="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">
-						GitHub profile
+						GitHub
 					</a>
 					<a class="button button--secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
 						LinkedIn
 					</a>
 				</div>
 				<ul class="hero__tags" aria-label="Primary strengths">
+					<li>Applied AI</li>
 					<li>Embedded systems</li>
-					<li>Industrial AI</li>
-					<li>Full-stack prototypes</li>
-					<li>Simulation workflows</li>
+					<li>Industrial sensing</li>
+					<li>Simulation</li>
 				</ul>
 				<div class="hero__stats" aria-label="Highlights">
 					{
@@ -99,19 +99,18 @@ const featuredProjects = projects.filter((project) => project.featured);
 			<section class="section-card about-panel reveal" id="about">
 				<SectionHeading
 					label={copy.aboutLabel}
-					intro="Engineer bridging hardware constraints, industrial data, and product-oriented AI systems."
+					intro="Research-oriented engineer working between machine learning, embedded systems, and practical deployment contexts."
 				/>
 				<div class="about-copy">
 					<p>{profile.bio}</p>
 					<p>
-						I started in Japanese manufacturing, building data collection and quality-analysis systems that
-						had to work with real sensors, real operators, and real production limits. Since then I have
-						continued moving across embedded systems, applied AI, and technical product design.
+						I started in Japanese manufacturing, building data collection and quality-analysis systems around
+						real sensors, operators, and production constraints. That experience shapes how I evaluate AI:
+						useful models need good data, clear interfaces, and realistic assumptions about deployment.
 					</p>
 					<p>
-						My recent work spans automotive hardware architecture exposure, manufacturing AI consulting,
-						full-stack product experiments like Rouvis, and interactive simulation projects that make complex
-						technical ideas easier to test and explain.
+						My recent work includes AI product prototypes, manufacturing data-analysis tools, automotive
+						hardware architecture exposure, and simulation projects for technical experimentation.
 					</p>
 				</div>
 				<ul class="hero__tags" aria-label="Detailed skills">
@@ -127,7 +126,7 @@ const featuredProjects = projects.filter((project) => project.featured);
 			<section class="section-card focus-panel reveal" id="focus">
 				<SectionHeading
 					label={copy.focusLabel}
-					intro="The overlap I care about is where physical systems, data, and software all affect each other."
+					intro="I am interested in AI that survives contact with physical systems, incomplete data, and real users."
 				/>
 				<div class="focus-list">
 					{
@@ -145,7 +144,7 @@ const featuredProjects = projects.filter((project) => project.featured);
 			<section class="section-card projects-panel" id="projects">
 				<SectionHeading
 					label={copy.projectsLabel}
-					intro="A curated shortlist of public work that best represents how I think and build."
+					intro="Selected public projects that show my work across applied AI, sensing, simulation, and technical products."
 				/>
 				<div class="projects-grid">
 					{
@@ -159,7 +158,7 @@ const featuredProjects = projects.filter((project) => project.featured);
 			<section class="section-card timeline-panel" id="timeline">
 				<SectionHeading
 					label={copy.timelineLabel}
-					intro="The through-line is consistent: build useful systems at the boundary between constraints and capability."
+					intro="A concise timeline of education, industry work, internships, and independent engineering projects."
 				/>
 				<div class="timeline-grid">
 					{
@@ -177,11 +176,11 @@ const featuredProjects = projects.filter((project) => project.featured);
 			<section class="section-card contact-panel reveal" id="contact">
 				<SectionHeading
 					label={copy.contactLabel}
-					intro="If you are hiring or building in embedded AI, industrial software, or technically demanding product environments, I am easy to reach."
+					intro="For research, internship, engineering, or collaboration inquiries, email is the best contact path."
 				/>
 				<p class="contact-panel__summary">
-					I prefer concise technical conversations with clear problem statements. GitHub is the best place to
-					see public work; email is best for collaboration, hiring, or project discussions.
+					GitHub is the best place to review public work. LinkedIn has career history and context. Email is
+					best for direct conversations.
 				</p>
 				<div class="contact-links">
 					{
