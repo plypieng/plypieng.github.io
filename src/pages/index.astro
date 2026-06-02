@@ -134,13 +134,16 @@ const primaryLinks = [
 			<h2>Experience</h2>
 			<ul class="timeline-list">
 				{
-					timeline.map((item) => (
-						<li class="timeline-item">
-							<p class="timeline-time">{item.dateRange}</p>
-							<p class="timeline-body">
-								<strong>{item.label}</strong>
-								<span>{item.detail}</span>
-							</p>
+					timeline.map((item, index) => (
+						<li class={`timeline-item timeline-item--${index % 2 === 0 ? 'left' : 'right'}`}>
+							<div class="timeline-node" aria-hidden="true"></div>
+							<div class="timeline-card">
+								<div class="timeline-heading">
+									<span class="timeline-time">{item.dateRange}</span>
+									<strong>{item.label}</strong>
+								</div>
+								<p>{item.detail}</p>
+							</div>
 						</li>
 					))
 				}
