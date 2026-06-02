@@ -145,6 +145,10 @@ strong {
 	gap: 0.9rem;
 }
 
+.compact-list {
+	margin-top: 0.9rem;
+}
+
 .work-entry {
 	margin-bottom: 1.55rem;
 }
