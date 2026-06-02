@@ -11,6 +11,7 @@ const projectOrder = [
 const featuredProjects = projectOrder
 	.map((slug) => projects.find((project) => project.slug === slug))
 	.filter((project): project is (typeof projects)[number] => project !== undefined);
+const timelineItems = [...timeline].reverse();
 const visibleContactLinks = contactLinks.filter((link) => link.label !== 'Company context');
 const primaryLinks = [
 	{ label: 'GitHub', href: profile.github },
@@ -134,7 +135,7 @@ const primaryLinks = [
 			<h2>Experience</h2>
 			<ul class="timeline-list">
 				{
-					timeline.map((item, index) => (
+					timelineItems.map((item, index) => (
 						<li class={`timeline-item timeline-item--${index % 2 === 0 ? 'left' : 'right'}`}>
 							<div class="timeline-node" aria-hidden="true"></div>
 							<div class="timeline-card">
