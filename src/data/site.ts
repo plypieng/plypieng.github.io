@@ -166,6 +166,11 @@ export const projects: Project[] = [
 
 export const focusAreas: FocusArea[] = [
 	{
+		title: 'KV-cache compression for LLMs',
+		description:
+			'My B.Eng. research under Prof. Akiko MANADA studies reliability-aware KV-cache compression for long-context LLM inference, focusing on how to preserve structurally important tokens under memory constraints.',
+	},
+	{
 		title: 'Applied AI systems',
 		description:
 			'I am interested in AI systems that move beyond demos and account for data quality, deployment constraints, and user workflows.',
@@ -174,11 +179,6 @@ export const focusAreas: FocusArea[] = [
 		title: 'Sensing and AIoT',
 		description:
 			'I have worked with sensor-integrated tooling, production data, and analysis workflows in manufacturing environments.',
-	},
-	{
-		title: 'Research prototypes',
-		description:
-			'I build small but complete systems to test ideas across machine learning, web software, embedded devices, and simulation.',
 	},
 	{
 		title: 'Simulation and visualization',
@@ -209,7 +209,7 @@ export const timeline: TimelineItem[] = [
 	{
 		label: 'B.Eng. candidate at Nagaoka University of Technology',
 		detail:
-			'Currently studying electrical, electronics, and information engineering in a coding theory and data-sequence lab while extending research and independent product work.',
+			'Studying electrical, electronics, and information engineering under Prof. Akiko MANADA, with B.Eng. research on reliability-aware KV-cache compression for long-context LLM inference.',
 		dateRange: '2025 to 2027',
 	},
 	{
