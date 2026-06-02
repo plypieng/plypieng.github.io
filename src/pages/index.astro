@@ -64,7 +64,7 @@ const primaryLinks = [
 		<section class="docs-section" id="bio">
 			<h2>Bio</h2>
 			<p>
-				I am an applied AI and embedded systems engineer based at Nagaoka University of Technology.
+				I am a fourth-year B.Eng. student at Nagaoka University of Technology.
 				My work connects <strong>machine learning</strong>, <strong>industrial sensing</strong>,
 				<strong>embedded systems</strong>, and <strong>software prototypes</strong>.
 			</p>
@@ -133,11 +133,12 @@ const primaryLinks = [
 			<h2>Experience</h2>
 			<ul class="timeline-list">
 				{
-					timeline.map((item) => (
-						<li>
-							<div class="timeline-time">{item.dateRange}</div>
-							<div>
-								<p><strong>{item.label}</strong></p>
+					timeline.map((item, index) => (
+						<li class="timeline-item">
+							<div class="timeline-marker" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+							<div class="timeline-content">
+								<p class="timeline-time">{item.dateRange}</p>
+								<p class="timeline-title"><strong>{item.label}</strong></p>
 								<p>{item.detail}</p>
 							</div>
 						</li>

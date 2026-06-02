@@ -39,11 +39,11 @@ export type ContactLink = {
 
 export const profile = {
 	name: 'Nantaphon Chimpalee',
-	title: 'Applied AI Research Engineer',
+	title: 'B.Eng. Student, Applied AI and Embedded Systems',
 	location: 'Nagaoka, Niigata, Japan',
-	bio: 'AIoT and embedded systems engineer with three years of industry experience in Japan, now completing a B.Eng. in Electrical, Electronics and Information Engineering at Nagaoka University of Technology.',
+	bio: 'Fourth-year B.Eng. student in Electrical, Electronics and Information Engineering at Nagaoka University of Technology, with three years of industry experience in Japanese manufacturing and AIoT.',
 	company: 'Nagaoka University of Technology',
-	email: 'plysd4@hotmail.com',
+	email: 'plysd4@gmail.com',
 	github: 'https://github.com/plypieng',
 	linkedin: 'https://www.linkedin.com/in/nantaphon-chimpalee-903726221/',
 	headline:
@@ -189,28 +189,16 @@ export const focusAreas: FocusArea[] = [
 
 export const timeline: TimelineItem[] = [
 	{
-		label: 'HW Architect Intern at Bosch Japan',
+		label: 'Process Development Engineer at Kuroda Precision',
 		detail:
-			'Worked on automotive E/E architecture and ADAS hardware platform customer-interface work in a hybrid internship setting.',
-		dateRange: 'Aug 2025 to Sep 2025',
-	},
-	{
-		label: 'AI Engineer Intern at OPTiM',
-		detail:
-			'Implemented Fusion RAG system work for the agentic AI chat product OPTiM AIRES.',
-		dateRange: 'Jul 2025 to Aug 2025',
+			'Worked on electric-vehicle motor-core manufacturing process development before moving into industrial IoT engineering.',
+		dateRange: 'Apr 2022 to Apr 2023',
 	},
 	{
 		label: 'AIoT Engineer in Japanese manufacturing',
 		detail:
 			'Built sensor data pipelines, quality analytics, and machine-learning workflows for production environments.',
 		dateRange: 'May 2023 to Apr 2025',
-	},
-	{
-		label: 'Process Development Engineer at Kuroda Precision',
-		detail:
-			'Worked on electric-vehicle motor-core manufacturing process development before moving into industrial IoT engineering.',
-		dateRange: 'Apr 2022 to Apr 2023',
 	},
 	{
 		label: 'Freelance manufacturing AI developer',
@@ -223,6 +211,18 @@ export const timeline: TimelineItem[] = [
 		detail:
 			'Currently studying electrical, electronics, and information engineering in a coding theory and data-sequence lab while extending research and independent product work.',
 		dateRange: '2025 to 2027',
+	},
+	{
+		label: 'AI Engineer Intern at OPTiM',
+		detail:
+			'Implemented Fusion RAG system work for the agentic AI chat product OPTiM AIRES.',
+		dateRange: 'Jul 2025 to Aug 2025',
+	},
+	{
+		label: 'HW Architect Intern at Bosch Japan',
+		detail:
+			'Worked on automotive E/E architecture and ADAS hardware platform customer-interface work in a hybrid internship setting.',
+		dateRange: 'Aug 2025 to Sep 2025',
 	},
 ];
 
@@ -239,7 +239,7 @@ export const contactLinks: ContactLink[] = [
 	},
 	{
 		label: 'Email',
-		href: 'mailto:plysd4@hotmail.com',
+		href: 'mailto:plysd4@gmail.com',
 		note: 'Best for collaboration and hiring inquiries',
 	},
 	{
@@ -250,12 +250,12 @@ export const contactLinks: ContactLink[] = [
 ];
 
 export const copy = {
-	pageTitle: 'Nantaphon Chimpalee | Applied AI Research Engineer',
+	pageTitle: 'Nantaphon Chimpalee | Applied AI and Embedded Systems',
 	pageDescription:
-		'Research-oriented homepage for Nantaphon Chimpalee, focused on applied AI, embedded systems, industrial sensing, and simulation prototypes.',
+		'Personal homepage for Nantaphon Chimpalee, a fourth-year B.Eng. student focused on applied AI, embedded systems, industrial sensing, and simulation prototypes.',
 	heroLabel: {
-		en: 'Research Profile',
-		ja: '研究プロフィール',
+		en: 'Personal Profile',
+		ja: 'プロフィール',
 	},
 	aboutLabel: {
 		en: 'About',
