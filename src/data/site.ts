@@ -191,13 +191,13 @@ export const timeline: TimelineItem[] = [
 	{
 		label: 'Process Development Engineer at Kuroda Precision',
 		detail:
-			'Worked on electric-vehicle motor-core manufacturing process development before moving into industrial IoT engineering.',
+			'Worked on electric-vehicle motor-core manufacturing process development before an internal transfer into industrial IoT engineering.',
 		dateRange: 'Apr 2022 to Apr 2023',
 	},
 	{
-		label: 'AIoT Engineer in Japanese manufacturing',
+		label: 'AIoT Engineer at Kuroda Precision',
 		detail:
-			'Built sensor data pipelines, quality analytics, and machine-learning workflows for production environments.',
+			'Transferred into AIoT work because of AI and embedded systems skills, then built sensor data pipelines, quality analytics, and machine-learning workflows for production environments.',
 		dateRange: 'May 2023 to Apr 2025',
 	},
 	{
